@@ -3,7 +3,7 @@
 - date reported: 2024-03-16
 - compiler: ifx 2024.0.2
 - bug report URL: <https://community.intel.com/t5/Intel-Fortran-Compiler/ifx-error-stop-line-with-concatenation-operator-produces/td-p/1581108>
-- status: bug confirmed, pending (CMPLRLLVM-56977)
+- status (2024-03-27): bug confirmed (bug ID CMPLRLLVM-56977), will be fixed in ifx 2024.2
 
 ## Bug report message
 
