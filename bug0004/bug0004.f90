@@ -45,7 +45,7 @@ contains
 
 function f(x)
     ! Uncommenting this makes no difference.
-    ! use bug0004_mod, only: ad
+    ! use bug0004_mod, only: t
     
     type(t), intent(in) :: x
     

@@ -4,6 +4,7 @@
 - compiler: ifx 2024.0.2
 - bug report URL: <https://community.intel.com/t5/Intel-Fortran-Compiler/ifx-error-stop-line-with-concatenation-operator-produces/td-p/1581108>
 - status (2024-03-27): bug confirmed (bug ID CMPLRLLVM-56977), will be fixed in ifx 2024.2
+- action to complete when fixed: In [FLT](https://github.com/btrettel/flt)'s [checks.f90](https://github.com/btrettel/flt/blob/main/src/checks.f90) subroutine `assert`, change `error stop full_message` to `error stop full_message = "***" // new_line("a") // "ASSERTION FAILED." // message_`, eliminate the variable `full_message` from `assert`, and remove the associated code comment.
 
 ## Bug report message
 
