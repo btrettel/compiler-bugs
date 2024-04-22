@@ -1,16 +1,16 @@
 # Bug 0004
 
-- date reported: not reported yet
+- date reported: 2024-04-21
 - compiler: nvfortran 24.3-0
-- bug report URL: (n/a)
-- status: (n/a)
+- bug report URL: <https://forums.developer.nvidia.com/t/nvfortran-24-3-false-compiler-error-for-type-bound-operator/290383>
+- status: reported
 - action to complete when fixed: In [FLT](https://github.com/btrettel/flt), move module procedure `f` from autodiff.f90 to an internal procedure in test_autodiff.f90.
 
 ## Bug report message
 
 ### nvfortran 24.3 false compiler error for type-bound operator
 
-This seems to be a strange bug. Here's the reproducer:
+I've encountered a likely bug with type-bound operators. Here's the reproducer:
 
     module bug0004_mod
 
@@ -72,6 +72,8 @@ This seems to be a strange bug. Here's the reproducer:
 
 Here's the command line log:
 
+    $ uname -a
+    Linux trident 5.15.0-102-generic #112~20.04.1-Ubuntu SMP Thu Mar 14 14:28:24 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
     $ nvfortran --version
 
     nvfortran 24.3-0 64-bit target on x86-64 Linux -tp haswell 
@@ -85,4 +87,4 @@ Here's the command line log:
 
 The use of the `**` operator here is not illegal as far as I'm aware. gfortran and ifx both have no problem with this code. And neither does nvfortran if I comment out two lines labeled above! Alternatively, if I make `f` a module procedure, there is no error.
 
-Also: While I can't make a simple reproducer, in the original code, there were similar compiler errors for the `*`, `/`, `+`, and `-` operators as the function I was using there intentionally had all operators.
+Also: You should be able to change the operator to `*`, `/`, `+`, or `-` and get the same false error as with `**`. I only checked minimal reproducers for `**` and `*`, but in the original code I got errors for all 5 operators.
