@@ -1,4 +1,4 @@
-# Bug 0004
+# Bug 0005
 
 - date reported: 2024-04-21
 - compiler: ifx 2024.1.0
