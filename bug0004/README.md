@@ -3,7 +3,7 @@
 - date reported: 2024-04-21
 - compiler: nvfortran 24.3-0
 - bug report URL: <https://forums.developer.nvidia.com/t/nvfortran-24-3-false-compiler-error-for-type-bound-operator/290383>
-- status: reported
+- status: reported (TPR #35548)
 - action to complete when fixed: In [FLT](https://github.com/btrettel/flt), move module procedure `f` from autodiff.f90 to an internal procedure in test_autodiff.f90.
 
 ## Bug report message

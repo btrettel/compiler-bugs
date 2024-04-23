@@ -2,8 +2,8 @@
 
 - date reported: 2024-04-21
 - compiler: ifx 2024.1.0
-- bug report URL: <https://community.intel.com/t5/Intel-Fortran-Compiler/ifx-2024-1-0-check-uninit-false-positive-when-reading-namelist/m-p/1591213>
-- status: reported
+- bug report URL: <https://community.intel.com/t5/Intel-Fortran-Compiler/ifx-2024-1-0-check-uninit-false-positive-when-reading-namelist/m-p/1591619>
+- status: bug confirmed (bug ID CMPLRLIBS-34927)
 - action to complete when fixed: In [FLT](https://github.com/btrettel/flt), in the Makefile, change `-check all,nouninit` to `-check all`.
 
 ## Bug report message
@@ -52,7 +52,7 @@ bug0005.f90:
 
 Since there are multiple files, I've attached them to this post (with the .nml files renamed to .txt as they couldn't be uploaded as .nml, and the code adjusted accordingly).
 
-Command line log:
+Command line log (I forgot the debug flag, so add that to get the precise line with the issue):
 
     $ uname -a
     Linux trident 5.15.0-102-generic #112~20.04.1-Ubuntu SMP Thu Mar 14 14:28:24 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
