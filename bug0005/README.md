@@ -88,3 +88,7 @@ Command line log (I forgot the debug flag, so add that to get the precise line w
     Exiting
 
 Thanks.
+
+***
+
+A thought I had later: My reproducer wasn't made quite as I had intended, and seems to have exposed a different bug than what I thought I was showing. My intention was to show that if x is undefined before a namelist read, uninit checking worked only if the namelist is on one line. I did show that to myself, but that's not quite what my posted reproducer showed. In my reproducer, x was already defined by the second namelist read, where the error was. So the error is wrong for a second reason: x was already defined by that point.
