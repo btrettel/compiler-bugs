@@ -3,7 +3,7 @@
 - date reported: 2024-05-06
 - compiler: ifx 2024.1.0
 - bug report URL: <https://community.intel.com/t5/Intel-Fortran-Compiler/Increasing-the-size-of-the-interface-contains-stack/m-p/1595451#M172075>
-- status: reported
+- status: bug confirmed
 - action to complete when fixed: Use larger units modules.
 
 ## Bug report message
