@@ -1,3 +1,13 @@
+# TODO
+
+- date reported: 
+- compiler: 
+- bug report URL: 
+- status: 
+- action to complete when fixed: 
+
+## Bug report message
+
 Cray Fortran 16 has wrong answers for bug0006 case. Make minimum reproducer.
 
 Cray Fortran 16 compiled all 3 in bug0006, likely faster than ifx.

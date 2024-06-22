@@ -1,8 +1,18 @@
+# TODO
+
+- date reported: 
+- compiler: 
+- bug report URL: 
+- status: 
+- action to complete when fixed: 
+
+## Bug report message
+
 A type-bound operator didn't work:
 
     $ lfortran typebound.f90 
     semantic error: Type mismatch in binary operator, the types must be compatible
-      --> test.f90:45:5
+      --> typebound.f90:45:5
        |
     45 | z = x * y
        |     ^   ^ type mismatch (a and b)
@@ -15,7 +25,7 @@ Trying an `interface` block didn't work either:
 
     $ lfortran interface.f90 
     semantic error: Type mismatch in binary operator, the types must be compatible
-      --> test2.f90:48:5
+      --> interface.f90:48:5
        |
     48 | z = x * y
        |     ^   ^ type mismatch (a and b)
