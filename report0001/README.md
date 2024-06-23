@@ -1,4 +1,4 @@
-# Bug 0001
+# Report 0001
 
 - date reported: 2023-07-02
 - compiler: lfortran 0.19.0

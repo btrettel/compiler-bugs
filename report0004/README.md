@@ -1,4 +1,4 @@
-# Bug 0004
+# Report 0004
 
 - date reported: 2024-04-21
 - compiler: nvfortran 24.3-0

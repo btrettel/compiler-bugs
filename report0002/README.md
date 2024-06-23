@@ -1,4 +1,4 @@
-# Bug 0002
+# Report 0002
 
 - date reported: 2024-03-16
 - compiler: ifx 2024.0.2
