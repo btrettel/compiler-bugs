@@ -119,6 +119,8 @@ namelist /b/ y
 ! Read a real from a multiline namelist to compare against reading a derived type. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+print "(a)", "Test 1"
+
 y = 0.0
 open(newunit=nml_unit, file="realmultiple.nml", status="old", action="read")
 read(unit=nml_unit, nml=b, iostat=rc, iomsg=msg)
@@ -131,6 +133,8 @@ if (abs(y - 2.0) > 2.0*spacing(2.0)) print "(a, (f6.3))", "FAILED: realmultiple,
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Read a real from a one line namelist to compare against reading a derived type. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "(a)", "Test 2"
 
 y = 0.0
 open(newunit=nml_unit, file="realone.nml", status="old", action="read")
@@ -145,6 +149,8 @@ if (abs(y - 2.0) > 2.0*spacing(2.0)) print "(a, (f6.3))", "FAILED: realone, x=",
 ! Read a real from a bad namelist to compare against reading a derived type. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+print "(a)", "Test 3"
+
 y = 0.0
 open(newunit=nml_unit, file="realbad.nml", status="old", action="read")
 read(unit=nml_unit, nml=b, iostat=rc, iomsg=msg)
@@ -155,6 +161,8 @@ if (rc == 0) print "(a, i0, 2a)", "FAILED: realbad, rc=", rc, " msg=", trim(msg)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Test with a multiline namelist file. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+print "(a)", "Test 4"
 
 x%v = 0.0
 open(newunit=nml_unit, file="multiple.nml", status="old", action="read")
@@ -169,6 +177,8 @@ if (abs(x%v - 2.0) > 2.0*spacing(2.0)) print "(a, (f6.3))", "FAILED: multiple, x
 ! Test with a one line namelist file. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+print "(a)", "Test 5"
+
 x%v = 0.0
 open(newunit=nml_unit, file="one.nml", status="old", action="read")
 read(unit=nml_unit, nml=a, iostat=rc, iomsg=msg)
@@ -182,11 +192,13 @@ if (abs(x%v - 2.0) > 2.0*spacing(2.0)) print "(a, (f6.3))", "FAILED: one, x=", x
 ! Test with a bad namelist. !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+print "(a)", "Test 6"
+
 x%v = 0.0
 open(newunit=nml_unit, file="bad.nml", status="old", action="read")
 read(unit=nml_unit, nml=a, iostat=rc, iomsg=msg)
 close(nml_unit)
 
-if (rc == 0) print "(a, i0, 2a)", "bad, rc=", rc, " msg=", trim(msg)
+if (rc == 0) print "(a, i0, 2a)", "FAILED: bad, rc=", rc, " msg=", trim(msg)
 
 end program nmldtio
