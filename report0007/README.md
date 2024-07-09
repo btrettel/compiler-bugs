@@ -1,9 +1,9 @@
 # Report 0007
 
-- date reported: 2024-06-23, second related report 2024-07-06
+- date reported: 2024-06-23
 - compiler: nagfor
 - bug report URL: (none)
-- status: first bug fixed (2024-07-03, build 7212), second bug reported
+- status: bug fixed (2024-07-03, build 7212)
 - action to complete when fixed: Continue trying derived type namelist I/O for units.f90.
 
 ## Bug report message
@@ -31,3 +31,5 @@ Can you all take a look at this case?
 Thanks.
 
 Ben
+
+[The issue brought up in this email was not valid.]
